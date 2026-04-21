@@ -9,7 +9,10 @@ app.use(cors());
 const server = http.createServer(app);
 
 const io = new Server(server, {
-    cors: { origin: "*", methods: ["GET", "POST"] }
+    cors: {
+        origin: "https://euphonious-yeot-c27733.netlify.app", // 👈 Netlify 주소 입력 (끝에 /는 빼주세요)
+        methods: ["GET", "POST"]
+    }
 });
 
 const rooms = {};
